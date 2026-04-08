@@ -78,10 +78,10 @@ var vs dynamic
 var → type is fixed after assignment
 dynamic → can change anytime
 var a = 10;
-// a = "Hi"; ❌
+// a = "Hi"; 
 
 dynamic b = 10;
-b = "Hi"; // ✅
+b = "Hi"; // 
 
 final vs const
 
