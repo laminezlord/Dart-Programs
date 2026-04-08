@@ -1,0 +1,157 @@
+PART A: THEORY
+Question 1
+
+a. Dart
+Dart is a programming language developed by Google used mainly to build mobile, web, and desktop apps (especially with Flutter).
+
+Primary purpose:
+To create fast, modern apps with a single codebase.
+
+b. History
+
+Introduced: 2011
+Why: To improve JavaScript limitations and build better web apps
+Current relevance: Widely used today with Flutter for cross-platform apps
+Question 2
+
+1. Object-Oriented Programming (OOP)
+Dart uses classes and objects.
+
+class Person {
+  String name;
+  Person(this.name);
+}
+
+2. Type Inference
+Dart can guess the type automatically.
+
+var name = "John"; // String
+
+3. JIT vs AOT
+
+JIT (Just-In-Time): Faster development (hot reload)
+AOT (Ahead-Of-Time): Faster performance (compiled before running)
+
+4. Asynchronous Programming
+Handles tasks like APIs without blocking code.
+
+Future<void> fetchData() async {
+  print("Loading...");
+}
+Question 3
+
+SDK (Software Development Kit)
+A collection of tools used to develop apps (compiler, libraries, etc.)
+
+main() function
+The starting point of every Dart program.
+
+void main() {
+  print("Hello");
+}
+
+void
+Means the function returns nothing.
+
+Question 7
+
+String
+
+String name = "Laminez";
+
+Boolean
+
+bool isStudent = true;
+
+Map
+
+Map user = {"name": "John", "age": 20};
+
+dynamic
+
+dynamic value = 10;
+value = "Hello";
+Question 8
+
+var vs dynamic
+
+var → type is fixed after assignment
+dynamic → can change anytime
+var a = 10;
+// a = "Hi"; ❌
+
+dynamic b = 10;
+b = "Hi"; // ✅
+
+final vs const
+
+final → value set once at runtime
+const → value fixed at compile time
+final time = DateTime.now();
+const pi = 3.14;
+PART B
+Question 9
+
+Output:
+
+String
+String
+
+Explanation:
+
+name is "Tomi" → String
+value was 10 but changed to "Now String" → now String
+Question 10
+
+Why final works with DateTime.now():
+Because it is assigned at runtime.
+
+Why const cannot:
+const requires a value known at compile time, but DateTime.now() changes every time.
+
+PART C: PRACTICAL
+Question 12: Personal Profile
+void main() {
+  String name = "Laminez";
+  int age = 20;
+  double height = 5.9;
+  bool isStudent = true;
+
+  Map profile = {
+    "name": name,
+    "age": age,
+    "height": height,
+    "student": isStudent
+  };
+
+  print("My name is $name, I am $age years old.");
+}
+Question 16: Map Manipulation
+void main() {
+  Map student = {
+    "name": "John",
+    "age": 22,
+    "course": "CS"
+  };
+
+  student["level"] = "300L"; // add
+  student["age"] = 23; // update
+
+  student.forEach((key, value) {
+    print("$key: $value");
+  });
+}
+Question 19: User Registration System
+void main() {
+  final username = "laminez"; // cannot change
+  int age = 20;
+  dynamic extra = "VIP user";
+
+  Map user = {
+    "username": username,
+    "age": age,
+    "extra": extra
+  };
+
+  print("User: ${user["username"]}, Age: ${user["age"]}");
+}
